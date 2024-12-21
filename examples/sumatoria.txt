@@ -1,6 +1,8 @@
-carga r1 r0 r0
-sumai r5 r0 +5
-suma r2 r2 r1
-dec r1
-mayor -2 r1 r0
-almacena r2 r5 r5
+# Calcula n + (n-1) + (n-2) + ... + 0, donde n es un número almacenado en la dirección 0000 de la memoria de datos.
+
+read    r1 r0 r0    # r1 contiene M[000]
++i      r5 r0 5     # r5 contiene 0005
++       r2 r2 r1    # r2 contiene R[r2] + R[r1]
+--      r1          # r1 contiene R[r1] - 1
+>       -2 r1 r0    # retroceder 2 si R[r1] > 0
+write   r2 r5 r5    # almacena R[2] en M[000a]

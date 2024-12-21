@@ -74,8 +74,7 @@ move r10 r5
 #######################################################################################
 
 
-# Al ejecutar convertir este archivo se espera un archivo de texto
-# con el siguiente contenido (sin los "# "):
+# Al convertir este archivo se espera un archivo de texto con el siguiente contenido (sin los "# "):
 
 # v2.0 raw
 # 0110 8225 1302 2402 3504 4624 5223 1100
