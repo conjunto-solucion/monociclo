@@ -1,0 +1,83 @@
+# Prueba de todas las instrucciones y pseudoinstrucciones.
+# Se asume que el banco de registros y la memoria de datos está vacía.
+# A la derecha de cada instrucción, el equivalente en hexadecimal.
+
+
+#######################################################################################
+
+# INSTRUCCIONES.
+
+not r1 r1 r0 # 0110
+# Resultado: el registro r1 contiene el valor ffff
+
++i r2 r2 5 # 8225
+# Resultado: el registro r2 contiene el valor 0005
+
++ r3 r0 r2 # 1302
+# Resultado: el registro r3 contiene el valor 0005
+
+- r4 r0 r2 # 2402
+# Resultado: el registro r4 contiene el valor fffb
+
+or r5 r0 r4 # 3504
+# Resultado: el registro r5 contiene el valor fffb
+
+and r6 r2 r4 # 4624
+# Resultado: el registro r6 contiene el valor 0001
+
+= 2 r2 r3 # 5223
++ r1 r0 r0 # 1100
+# Resultado: el registro r1 contiene el valor ffff
+
+> 2 r6 r0 # 6260
++ r1 r0 r0 # 1100
+# Resultado: el registro r1 contiene el valor ffff
+
+>= 2 r6 r0 # 7260
++ r1 r0 r0 # 1100
+# Resultado: el registro r1 contiene el valor ffff
+
+write r2 r6 r6 # a266
+# Resultado: la dirección de memoria 0002 contiene el valor 0005
+
+read r7 r6 r6 # 9766
+# Resultado: el registro r7 contiene el valor 0005
+
+writei r1 r6 5 # c165
+# Resultado: la dirección de memoria 0006 contiene el valor ffff
+
+readi r8 r6 5  # b865
+# Resultado: el registro r8 contiene el valor ffff
+
+
+
+#######################################################################################
+
+# PSEUDOINSTRUCCIONES
+
+not r1
+# Resultado: el registro r1 contiene el valor 0000
+
+idle
+# Resultado: no cambió nada.
+
+++ r3
+# Resultado: el registro r3 contiene el valor 0006
+
+-- r3
+# Resultado: el registro r3 contiene el valor 0005
+
+move r10 r5
+# Resultado: el registro r10 contiene el valor fffb
+
+
+#######################################################################################
+
+
+# Al ejecutar convertir este archivo se espera un archivo de texto
+# con el siguiente contenido (sin los "# "):
+
+# v2.0 raw
+# 0110 8225 1302 2402 3504 4624 5223 1100
+# 6260 1100 7260 1100 a266 9766 c165 b865
+# 0110 0000 8331 833f 1a50

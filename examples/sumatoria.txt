@@ -1,0 +1,6 @@
+carga r1 r0 r0
+sumai r5 r0 +5
+suma r2 r2 r1
+dec r1
+mayor -2 r1 r0
+almacena r2 r5 r5
