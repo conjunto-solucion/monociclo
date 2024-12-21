@@ -12,9 +12,9 @@ $ g++ -o ./monociclo $(find ./src/ -name "*.cpp")
 $ monociclo <fuente> [salida]
 ```
 
-* fuente: es un archivo de texto con un programa en el lenguaje monociclo
+* fuente: es un archivo de texto con un programa en el lenguaje monociclo.
 
-* salida (opcional): es la ruta y nombre de archivo a crear.
+* salida (opcional): es el archivo a crear.
 
 Ejemplo:
 
@@ -198,8 +198,9 @@ Para instrucciones que contienen valores inmediatos, no almacenan valores en reg
 
 Los comentarios comienzan con #. Ejemplo:
 ```
-# esto es una línea de comentario
-move r1 r2 # esto es un comentario después de una instrucción
+# esto es una línea de comentario.
+move r1 r2 # esto es un comentario después de una instrucción.
+move r1 r2# esto no es un comentario válido.
 ```
 
 
