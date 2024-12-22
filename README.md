@@ -78,14 +78,14 @@ Para instrucciones que contienen valores inmediatos, no almacenan valores en reg
 **not**
 - Formato: R
 - Sintaxis: `not D S1 r0`
-- RTL: R[D] ← ¬(R[S1] + R[r0]); PC ← PC + 1;
+- RTL: R[D]←¬(R[S1]+R[r0]); PC←PC+1;
 - Descripción: almacena en el registro D el valor ¬R[S1]
 - Código: 0000
 
 **\+**
 - Formato: R
 - Sintaxis: `+ D S1 S2`
-- RTL: R[D]←R[S1]+R[S2]; PC←PC+1;;
+- RTL: R[D]←R[S1]+R[S2]; PC←PC+1;
 - Descripción: almacena en el registro D el valor R[S1]+R[S2]
 - Código: 0001
 
@@ -99,7 +99,7 @@ Para instrucciones que contienen valores inmediatos, no almacenan valores en reg
 **or**
 - Formato: R
 - Sintaxis: `or D S1 S2`
-- RTL: R[D]←R[S1] | R[S2]; PC←PC+1;
+- RTL: R[D]←R[S1]|R[S2]; PC←PC+1;
 - Descripción: almacena en el registro D el valor R[S1] ∨ R[S2]
 - Código: 0011
 
