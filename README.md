@@ -182,7 +182,7 @@ Para instrucciones que contienen valores inmediatos, no almacenan valores en reg
 **++**
 - Sintaxis: `++ S1`
 - Descripción: almacena en el registro S1 el valor R[S1]+1
-- Equivale a: `+i RF1 RF1 +1`
+- Equivale a: `+i RF1 RF1 1`
 
 **--**
 - Sintaxis: `-- S1`
@@ -198,8 +198,8 @@ Para instrucciones que contienen valores inmediatos, no almacenan valores en reg
 
 Los comentarios comienzan con #. Ejemplo:
 ```
-# esto es una línea de comentario.
-move r1 r2 # esto es un comentario después de una instrucción.
+# una línea de comentario.
+move r1 r2 # un comentario después de una instrucción.
 move r1 r2# esto no es un comentario válido.
 ```
 
